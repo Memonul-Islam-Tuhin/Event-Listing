@@ -1,0 +1,20 @@
+{
+  "name": "event-listing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "frontend": "npm run dev --prefix event-frontend",
+    "backend": "npm run start:dev --prefix event-backend",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend:build": "npm run build --prefix event-frontend",
+    "backend:build": "npm run build --prefix event-backend",
+    "build": "npm run frontend:build && npm run backend:build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
